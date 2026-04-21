@@ -1,1 +1,43 @@
-Nothing should be ignored in this case, as only a Python source file (`cpp_analysis_datastructures.py`) was added without any build artifacts, dependencies, or temporary files.
+```
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+
+# Dependencies
+.venv/
+venv/
+node_modules/
+*.egg-info/
+dist/
+build/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Editors
+.vscode/
+.idea/
+
+# Coverage
+.coverage
+coverage/
+htmlcov/
+
+# Python specific
+*.pyo
+*.pyd
+.Python
+*.so
+*.dylib
+*.dll
+
+# MyPy
+.mypy_cache/
+```
