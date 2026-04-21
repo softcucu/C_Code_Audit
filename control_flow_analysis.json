@@ -1,0 +1,1044 @@
+{
+  "functions": [
+    {
+      "function_name": "doWhileExample",
+      "qualified_name": "doWhileExample",
+      "start_line": 45,
+      "end_line": 52,
+      "parameters": [
+        "n"
+      ],
+      "return_type": "int",
+      "nodes": [
+        {
+          "id": 0,
+          "type": "ENTRY",
+          "start_line": 45,
+          "end_line": 45,
+          "start_column": 1,
+          "end_column": 1,
+          "code": "Entry: doWhileExample",
+          "label": null,
+          "condition": null,
+          "successors": [
+            2
+          ],
+          "predecessors": []
+        },
+        {
+          "id": 1,
+          "type": "EXIT",
+          "start_line": 52,
+          "end_line": 52,
+          "start_column": 1,
+          "end_column": 2,
+          "code": "Exit: doWhileExample",
+          "label": null,
+          "condition": null,
+          "successors": [],
+          "predecessors": []
+        },
+        {
+          "id": 2,
+          "type": "STATEMENT",
+          "start_line": 46,
+          "end_line": 46,
+          "start_column": 5,
+          "end_column": 19,
+          "code": "int count = 0;",
+          "label": null,
+          "condition": null,
+          "successors": [
+            3
+          ],
+          "predecessors": [
+            0
+          ]
+        },
+        {
+          "id": 3,
+          "type": "STATEMENT",
+          "start_line": 48,
+          "end_line": 48,
+          "start_column": 9,
+          "end_column": 17,
+          "code": "count++;",
+          "label": null,
+          "condition": null,
+          "successors": [
+            4
+          ],
+          "predecessors": [
+            2
+          ]
+        },
+        {
+          "id": 4,
+          "type": "STATEMENT",
+          "start_line": 49,
+          "end_line": 49,
+          "start_column": 9,
+          "end_column": 17,
+          "code": "n /= 10;",
+          "label": null,
+          "condition": null,
+          "successors": [
+            5
+          ],
+          "predecessors": [
+            3
+          ]
+        },
+        {
+          "id": 5,
+          "type": "RETURN",
+          "start_line": 51,
+          "end_line": 51,
+          "start_column": 5,
+          "end_column": 18,
+          "code": "return count;",
+          "label": null,
+          "condition": null,
+          "successors": [],
+          "predecessors": [
+            4
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "from": 0,
+          "to": 2
+        },
+        {
+          "from": 2,
+          "to": 3
+        },
+        {
+          "from": 3,
+          "to": 4
+        },
+        {
+          "from": 4,
+          "to": 5
+        }
+      ],
+      "entry_node_id": 0,
+      "exit_node_id": 1,
+      "loops": [],
+      "branch_count": 0,
+      "loop_count": 0,
+      "cyclomatic_complexity": 1
+    },
+    {
+      "function_name": "processNumber",
+      "qualified_name": "processNumber",
+      "start_line": 21,
+      "end_line": 32,
+      "parameters": [
+        "num"
+      ],
+      "return_type": "void",
+      "nodes": [
+        {
+          "id": 0,
+          "type": "ENTRY",
+          "start_line": 21,
+          "end_line": 21,
+          "start_column": 1,
+          "end_column": 1,
+          "code": "Entry: processNumber",
+          "label": null,
+          "condition": null,
+          "successors": [
+            2
+          ],
+          "predecessors": []
+        },
+        {
+          "id": 1,
+          "type": "EXIT",
+          "start_line": 32,
+          "end_line": 32,
+          "start_column": 1,
+          "end_column": 2,
+          "code": "Exit: processNumber",
+          "label": null,
+          "condition": null,
+          "successors": [],
+          "predecessors": [
+            6
+          ]
+        },
+        {
+          "id": 2,
+          "type": "SWITCH",
+          "start_line": 22,
+          "end_line": 31,
+          "start_column": 5,
+          "end_column": 6,
+          "code": "switch ((num % 3))",
+          "label": null,
+          "condition": "(num % 3)",
+          "successors": [
+            3
+          ],
+          "predecessors": [
+            0
+          ]
+        },
+        {
+          "id": 3,
+          "type": "STATEMENT",
+          "start_line": 23,
+          "end_line": 25,
+          "start_column": 9,
+          "end_column": 19,
+          "code": "case 0:\n            std::cout << \"Divisible by 3\" << std::endl;\n            break;",
+          "label": null,
+          "condition": null,
+          "successors": [
+            4
+          ],
+          "predecessors": [
+            2
+          ]
+        },
+        {
+          "id": 4,
+          "type": "STATEMENT",
+          "start_line": 26,
+          "end_line": 28,
+          "start_column": 9,
+          "end_column": 19,
+          "code": "case 1:\n            std::cout << \"Remainder 1\" << std::endl;\n            break;",
+          "label": null,
+          "condition": null,
+          "successors": [
+            5
+          ],
+          "predecessors": [
+            3
+          ]
+        },
+        {
+          "id": 5,
+          "type": "STATEMENT",
+          "start_line": 29,
+          "end_line": 30,
+          "start_column": 9,
+          "end_column": 53,
+          "code": "default:\n            std::cout << \"Remainder 2\" << std::endl;",
+          "label": null,
+          "condition": null,
+          "successors": [
+            6
+          ],
+          "predecessors": [
+            4
+          ]
+        },
+        {
+          "id": 6,
+          "type": "STATEMENT",
+          "start_line": 31,
+          "end_line": 31,
+          "start_column": 5,
+          "end_column": 6,
+          "code": "/* switch end */",
+          "label": null,
+          "condition": null,
+          "successors": [
+            1
+          ],
+          "predecessors": [
+            5
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "from": 0,
+          "to": 2
+        },
+        {
+          "from": 2,
+          "to": 3
+        },
+        {
+          "from": 3,
+          "to": 4
+        },
+        {
+          "from": 4,
+          "to": 5
+        },
+        {
+          "from": 5,
+          "to": 6
+        },
+        {
+          "from": 6,
+          "to": 1
+        }
+      ],
+      "entry_node_id": 0,
+      "exit_node_id": 1,
+      "loops": [],
+      "branch_count": 1,
+      "loop_count": 0,
+      "cyclomatic_complexity": 2
+    },
+    {
+      "function_name": "factorial",
+      "qualified_name": "factorial",
+      "start_line": 4,
+      "end_line": 9,
+      "parameters": [
+        "n"
+      ],
+      "return_type": "int",
+      "nodes": [
+        {
+          "id": 0,
+          "type": "ENTRY",
+          "start_line": 4,
+          "end_line": 4,
+          "start_column": 1,
+          "end_column": 1,
+          "code": "Entry: factorial",
+          "label": null,
+          "condition": null,
+          "successors": [
+            2
+          ],
+          "predecessors": []
+        },
+        {
+          "id": 1,
+          "type": "EXIT",
+          "start_line": 9,
+          "end_line": 9,
+          "start_column": 1,
+          "end_column": 2,
+          "code": "Exit: factorial",
+          "label": null,
+          "condition": null,
+          "successors": [],
+          "predecessors": []
+        },
+        {
+          "id": 2,
+          "type": "CONDITION",
+          "start_line": 5,
+          "end_line": 7,
+          "start_column": 5,
+          "end_column": 6,
+          "code": "if ((n <= 1))",
+          "label": null,
+          "condition": "(n <= 1)",
+          "successors": [
+            3,
+            4
+          ],
+          "predecessors": [
+            0
+          ]
+        },
+        {
+          "id": 3,
+          "type": "RETURN",
+          "start_line": 6,
+          "end_line": 6,
+          "start_column": 9,
+          "end_column": 18,
+          "code": "return 1;",
+          "label": null,
+          "condition": null,
+          "successors": [],
+          "predecessors": [
+            2
+          ]
+        },
+        {
+          "id": 4,
+          "type": "RETURN",
+          "start_line": 8,
+          "end_line": 8,
+          "start_column": 5,
+          "end_column": 33,
+          "code": "return n * factorial(n - 1);",
+          "label": null,
+          "condition": null,
+          "successors": [],
+          "predecessors": [
+            2
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "from": 0,
+          "to": 2
+        },
+        {
+          "from": 2,
+          "to": 3
+        },
+        {
+          "from": 2,
+          "to": 4
+        }
+      ],
+      "entry_node_id": 0,
+      "exit_node_id": 1,
+      "loops": [],
+      "branch_count": 1,
+      "loop_count": 0,
+      "cyclomatic_complexity": 2
+    },
+    {
+      "function_name": "whileExample",
+      "qualified_name": "whileExample",
+      "start_line": 34,
+      "end_line": 43,
+      "parameters": [
+        "n"
+      ],
+      "return_type": "int",
+      "nodes": [
+        {
+          "id": 0,
+          "type": "ENTRY",
+          "start_line": 34,
+          "end_line": 34,
+          "start_column": 1,
+          "end_column": 1,
+          "code": "Entry: whileExample",
+          "label": null,
+          "condition": null,
+          "successors": [
+            2
+          ],
+          "predecessors": []
+        },
+        {
+          "id": 1,
+          "type": "EXIT",
+          "start_line": 43,
+          "end_line": 43,
+          "start_column": 1,
+          "end_column": 2,
+          "code": "Exit: whileExample",
+          "label": null,
+          "condition": null,
+          "successors": [],
+          "predecessors": []
+        },
+        {
+          "id": 2,
+          "type": "STATEMENT",
+          "start_line": 35,
+          "end_line": 35,
+          "start_column": 5,
+          "end_column": 17,
+          "code": "int sum = 0;",
+          "label": null,
+          "condition": null,
+          "successors": [
+            3
+          ],
+          "predecessors": [
+            0
+          ]
+        },
+        {
+          "id": 3,
+          "type": "CONDITION",
+          "start_line": 37,
+          "end_line": 39,
+          "start_column": 9,
+          "end_column": 10,
+          "code": "if ((n % 2 == 0))",
+          "label": null,
+          "condition": "(n % 2 == 0)",
+          "successors": [
+            4,
+            5
+          ],
+          "predecessors": [
+            2
+          ]
+        },
+        {
+          "id": 4,
+          "type": "STATEMENT",
+          "start_line": 38,
+          "end_line": 38,
+          "start_column": 13,
+          "end_column": 22,
+          "code": "sum += n;",
+          "label": null,
+          "condition": null,
+          "successors": [
+            5
+          ],
+          "predecessors": [
+            3
+          ]
+        },
+        {
+          "id": 5,
+          "type": "STATEMENT",
+          "start_line": 40,
+          "end_line": 40,
+          "start_column": 9,
+          "end_column": 13,
+          "code": "n--;",
+          "label": null,
+          "condition": null,
+          "successors": [
+            6
+          ],
+          "predecessors": [
+            4,
+            3
+          ]
+        },
+        {
+          "id": 6,
+          "type": "RETURN",
+          "start_line": 42,
+          "end_line": 42,
+          "start_column": 5,
+          "end_column": 16,
+          "code": "return sum;",
+          "label": null,
+          "condition": null,
+          "successors": [],
+          "predecessors": [
+            5
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "from": 0,
+          "to": 2
+        },
+        {
+          "from": 2,
+          "to": 3
+        },
+        {
+          "from": 3,
+          "to": 4
+        },
+        {
+          "from": 4,
+          "to": 5
+        },
+        {
+          "from": 3,
+          "to": 5
+        },
+        {
+          "from": 5,
+          "to": 6
+        }
+      ],
+      "entry_node_id": 0,
+      "exit_node_id": 1,
+      "loops": [],
+      "branch_count": 1,
+      "loop_count": 0,
+      "cyclomatic_complexity": 2
+    },
+    {
+      "function_name": "findMax",
+      "qualified_name": "findMax",
+      "start_line": 11,
+      "end_line": 19,
+      "parameters": [
+        "size"
+      ],
+      "return_type": "int",
+      "nodes": [
+        {
+          "id": 0,
+          "type": "ENTRY",
+          "start_line": 11,
+          "end_line": 11,
+          "start_column": 1,
+          "end_column": 1,
+          "code": "Entry: findMax",
+          "label": null,
+          "condition": null,
+          "successors": [
+            2
+          ],
+          "predecessors": []
+        },
+        {
+          "id": 1,
+          "type": "EXIT",
+          "start_line": 19,
+          "end_line": 19,
+          "start_column": 1,
+          "end_column": 2,
+          "code": "Exit: findMax",
+          "label": null,
+          "condition": null,
+          "successors": [],
+          "predecessors": []
+        },
+        {
+          "id": 2,
+          "type": "STATEMENT",
+          "start_line": 12,
+          "end_line": 12,
+          "start_column": 5,
+          "end_column": 22,
+          "code": "int max = arr[0];",
+          "label": null,
+          "condition": null,
+          "successors": [
+            3
+          ],
+          "predecessors": [
+            0
+          ]
+        },
+        {
+          "id": 3,
+          "type": "CONDITION",
+          "start_line": 14,
+          "end_line": 16,
+          "start_column": 9,
+          "end_column": 10,
+          "code": "if ((arr[i] > max))",
+          "label": null,
+          "condition": "(arr[i] > max)",
+          "successors": [
+            4,
+            5
+          ],
+          "predecessors": [
+            2
+          ]
+        },
+        {
+          "id": 4,
+          "type": "STATEMENT",
+          "start_line": 15,
+          "end_line": 15,
+          "start_column": 13,
+          "end_column": 26,
+          "code": "max = arr[i];",
+          "label": null,
+          "condition": null,
+          "successors": [
+            5
+          ],
+          "predecessors": [
+            3
+          ]
+        },
+        {
+          "id": 5,
+          "type": "RETURN",
+          "start_line": 18,
+          "end_line": 18,
+          "start_column": 5,
+          "end_column": 16,
+          "code": "return max;",
+          "label": null,
+          "condition": null,
+          "successors": [],
+          "predecessors": [
+            4,
+            3
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "from": 0,
+          "to": 2
+        },
+        {
+          "from": 2,
+          "to": 3
+        },
+        {
+          "from": 3,
+          "to": 4
+        },
+        {
+          "from": 4,
+          "to": 5
+        },
+        {
+          "from": 3,
+          "to": 5
+        }
+      ],
+      "entry_node_id": 0,
+      "exit_node_id": 1,
+      "loops": [],
+      "branch_count": 1,
+      "loop_count": 0,
+      "cyclomatic_complexity": 2
+    },
+    {
+      "function_name": "gotoExample",
+      "qualified_name": "gotoExample",
+      "start_line": 54,
+      "end_line": 63,
+      "parameters": [
+        "n"
+      ],
+      "return_type": "void",
+      "nodes": [
+        {
+          "id": 0,
+          "type": "ENTRY",
+          "start_line": 54,
+          "end_line": 54,
+          "start_column": 1,
+          "end_column": 1,
+          "code": "Entry: gotoExample",
+          "label": null,
+          "condition": null,
+          "successors": [
+            2
+          ],
+          "predecessors": []
+        },
+        {
+          "id": 1,
+          "type": "EXIT",
+          "start_line": 63,
+          "end_line": 63,
+          "start_column": 1,
+          "end_column": 2,
+          "code": "Exit: gotoExample",
+          "label": null,
+          "condition": null,
+          "successors": [],
+          "predecessors": [
+            6
+          ]
+        },
+        {
+          "id": 2,
+          "type": "CONDITION",
+          "start_line": 55,
+          "end_line": 57,
+          "start_column": 5,
+          "end_column": 6,
+          "code": "if ((n < 0))",
+          "label": null,
+          "condition": "(n < 0)",
+          "successors": [
+            3,
+            4
+          ],
+          "predecessors": [
+            0
+          ]
+        },
+        {
+          "id": 3,
+          "type": "STATEMENT",
+          "start_line": 56,
+          "end_line": 56,
+          "start_column": 9,
+          "end_column": 23,
+          "code": "goto negative;",
+          "label": null,
+          "condition": null,
+          "successors": [
+            4
+          ],
+          "predecessors": [
+            2
+          ]
+        },
+        {
+          "id": 4,
+          "type": "STATEMENT",
+          "start_line": 58,
+          "end_line": 58,
+          "start_column": 5,
+          "end_column": 42,
+          "code": "std::cout << \"Positive\" << std::endl;",
+          "label": null,
+          "condition": null,
+          "successors": [
+            5
+          ],
+          "predecessors": [
+            3,
+            2
+          ]
+        },
+        {
+          "id": 5,
+          "type": "RETURN",
+          "start_line": 59,
+          "end_line": 59,
+          "start_column": 5,
+          "end_column": 12,
+          "code": "return;",
+          "label": null,
+          "condition": null,
+          "successors": [],
+          "predecessors": [
+            4
+          ]
+        },
+        {
+          "id": 6,
+          "type": "STATEMENT",
+          "start_line": 61,
+          "end_line": 62,
+          "start_column": 1,
+          "end_column": 42,
+          "code": "negative:\n    std::cout << \"Negative\" << std::endl;",
+          "label": null,
+          "condition": null,
+          "successors": [
+            1
+          ],
+          "predecessors": []
+        }
+      ],
+      "edges": [
+        {
+          "from": 0,
+          "to": 2
+        },
+        {
+          "from": 2,
+          "to": 3
+        },
+        {
+          "from": 3,
+          "to": 4
+        },
+        {
+          "from": 2,
+          "to": 4
+        },
+        {
+          "from": 4,
+          "to": 5
+        },
+        {
+          "from": 6,
+          "to": 1
+        }
+      ],
+      "entry_node_id": 0,
+      "exit_node_id": 1,
+      "loops": [],
+      "branch_count": 1,
+      "loop_count": 0,
+      "cyclomatic_complexity": 2
+    },
+    {
+      "function_name": "nestedLoops",
+      "qualified_name": "nestedLoops",
+      "start_line": 65,
+      "end_line": 79,
+      "parameters": [
+        "rows",
+        "cols"
+      ],
+      "return_type": "int",
+      "nodes": [
+        {
+          "id": 0,
+          "type": "ENTRY",
+          "start_line": 65,
+          "end_line": 65,
+          "start_column": 1,
+          "end_column": 1,
+          "code": "Entry: nestedLoops",
+          "label": null,
+          "condition": null,
+          "successors": [
+            2
+          ],
+          "predecessors": []
+        },
+        {
+          "id": 1,
+          "type": "EXIT",
+          "start_line": 79,
+          "end_line": 79,
+          "start_column": 1,
+          "end_column": 2,
+          "code": "Exit: nestedLoops",
+          "label": null,
+          "condition": null,
+          "successors": [],
+          "predecessors": []
+        },
+        {
+          "id": 2,
+          "type": "STATEMENT",
+          "start_line": 66,
+          "end_line": 66,
+          "start_column": 5,
+          "end_column": 19,
+          "code": "int total = 0;",
+          "label": null,
+          "condition": null,
+          "successors": [
+            3
+          ],
+          "predecessors": [
+            0
+          ]
+        },
+        {
+          "id": 3,
+          "type": "CONDITION",
+          "start_line": 69,
+          "end_line": 71,
+          "start_column": 13,
+          "end_column": 14,
+          "code": "if ((i == j))",
+          "label": null,
+          "condition": "(i == j)",
+          "successors": [
+            4,
+            5
+          ],
+          "predecessors": [
+            2
+          ]
+        },
+        {
+          "id": 4,
+          "type": "CONTINUE",
+          "start_line": 70,
+          "end_line": 70,
+          "start_column": 17,
+          "end_column": 26,
+          "code": "continue;",
+          "label": null,
+          "condition": null,
+          "successors": [],
+          "predecessors": [
+            3
+          ]
+        },
+        {
+          "id": 5,
+          "type": "CONDITION",
+          "start_line": 72,
+          "end_line": 74,
+          "start_column": 13,
+          "end_column": 14,
+          "code": "if ((i + j > 10))",
+          "label": null,
+          "condition": "(i + j > 10)",
+          "successors": [
+            6,
+            7
+          ],
+          "predecessors": [
+            3
+          ]
+        },
+        {
+          "id": 6,
+          "type": "BREAK",
+          "start_line": 73,
+          "end_line": 73,
+          "start_column": 17,
+          "end_column": 23,
+          "code": "break;",
+          "label": null,
+          "condition": null,
+          "successors": [],
+          "predecessors": [
+            5
+          ]
+        },
+        {
+          "id": 7,
+          "type": "STATEMENT",
+          "start_line": 75,
+          "end_line": 75,
+          "start_column": 13,
+          "end_column": 21,
+          "code": "total++;",
+          "label": null,
+          "condition": null,
+          "successors": [
+            8
+          ],
+          "predecessors": [
+            5
+          ]
+        },
+        {
+          "id": 8,
+          "type": "RETURN",
+          "start_line": 78,
+          "end_line": 78,
+          "start_column": 5,
+          "end_column": 18,
+          "code": "return total;",
+          "label": null,
+          "condition": null,
+          "successors": [],
+          "predecessors": [
+            7
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "from": 0,
+          "to": 2
+        },
+        {
+          "from": 2,
+          "to": 3
+        },
+        {
+          "from": 3,
+          "to": 4
+        },
+        {
+          "from": 3,
+          "to": 5
+        },
+        {
+          "from": 5,
+          "to": 6
+        },
+        {
+          "from": 5,
+          "to": 7
+        },
+        {
+          "from": 7,
+          "to": 8
+        }
+      ],
+      "entry_node_id": 0,
+      "exit_node_id": 1,
+      "loops": [],
+      "branch_count": 2,
+      "loop_count": 0,
+      "cyclomatic_complexity": 3
+    }
+  ],
+  "file": "sample.cpp"
+}
